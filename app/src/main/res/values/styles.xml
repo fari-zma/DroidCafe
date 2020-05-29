@@ -1,0 +1,34 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="titleTextColor">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme2" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="radioButtonStyle">@style/CustomRadio</item>
+        <item name="checkboxStyle">@style/CustomCheckBox</item>
+        <item name="editTextStyle">@style/CustomEditText</item>
+    </style>
+
+    <style name="CustomRadio" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:textColor">@color/colorAccent2</item>
+    </style>
+
+    <style name="CustomCheckBox" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:textColor">@color/colorAccent2</item>
+    </style>
+
+    <style name="CustomEditText" parent="Widget.AppCompat.EditText">
+        <item name="android:textColor">@color/colorAccent2</item>
+    </style>
+
+</resources>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/droid_deserts"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/margin_top"/>
+
+    <ImageView
+        android:id="@+id/imageDonut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/donut_circle"
+        android:onClick="showToast"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_marginStart="@dimen/margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        android:contentDescription="@string/donut" />
+
+    <TextView
+        android:id="@+id/textDonut"
+        android:layout_width="@dimen/width"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_marginHorizontal="@dimen/margin"
+        android:text="@string/donut"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imageDonut"
+        app:layout_constraintTop_toTopOf="@id/imageDonut" />
+
+    <ImageView
+        android:id="@+id/imageIceCream"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/icecream_circle"
+        android:onClick="showToast"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_marginStart="@dimen/margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageDonut"
+        android:contentDescription="@string/icecream" />
+
+    <TextView
+        android:id="@+id/textIceCream"
+        android:layout_width="@dimen/width"
+        android:layout_height="wrap_content"
+        android:text="@string/icecream"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_marginHorizontal="@dimen/margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/imageIceCream"
+        app:layout_constraintStart_toEndOf="@id/imageIceCream"/>
+
+    <ImageView
+        android:id="@+id/imageFroyo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/froyo_circle"
+        android:onClick="showToast"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_marginStart="@dimen/margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageIceCream"
+        android:contentDescription="@string/froyo" />
+
+    <TextView
+        android:id="@+id/textFroyo"
+        android:layout_width="@dimen/width"
+        android:layout_height="wrap_content"
+        android:text="@string/froyo"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_marginHorizontal="@dimen/margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/imageFroyo"
+        app:layout_constraintStart_toEndOf="@id/imageFroyo"/>
+
+    <ImageButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="6dp"
+        app:srcCompat="@drawable/ic_action"
+        android:onClick="order"
+        android:background="@drawable/button_background"
+        android:layout_marginEnd="@dimen/margin"
+        android:layout_marginBottom="@dimen/margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

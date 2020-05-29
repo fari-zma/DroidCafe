@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:id="@+id/rootLayout">
+
+    <ImageButton
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/back"
+        android:background="@null"
+        android:onClick="goBack"
+        android:layout_marginStart="@dimen/margin_top"
+        android:layout_marginTop="@dimen/margin_top"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageButton
+        android:id="@+id/phone_call"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/phone"
+        android:background="@null"
+        android:onClick="call"
+        android:layout_marginEnd="@dimen/margin_top"
+        android:layout_marginTop="@dimen/margin_top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/layout_top"
+        android:background="@drawable/layout_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/back"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_marginTop="@dimen/margin"
+            android:text=""
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin"
+            android:layout_marginTop="@dimen/margin_form"
+            android:text="@string/name_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView" />
+
+        <EditText
+            android:id="@+id/name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_top"
+            android:autofillHints="@string/name_hint"
+            android:ems="10"
+            android:hint="@string/name_hint"
+            android:inputType="textPersonName"
+            app:layout_constraintBaseline_toBaselineOf="@+id/name"
+            app:layout_constraintStart_toEndOf="@id/name" />
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin"
+            android:layout_marginTop="@dimen/margin_form"
+            android:text="@string/address_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/name" />
+
+        <EditText
+            android:id="@+id/address_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_top"
+            android:autofillHints="@string/address_hint"
+            android:ems="10"
+            android:hint="@string/address_hint"
+            android:inputType="textMultiLine"
+            app:layout_constraintBaseline_toBaselineOf="@id/address"
+            app:layout_constraintStart_toEndOf="@id/address" />
+
+        <TextView
+            android:id="@+id/phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin"
+            android:layout_marginTop="@dimen/margin_form"
+            android:text="@string/phone_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/address" />
+
+        <EditText
+            android:id="@+id/phone_text"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_top"
+            android:autofillHints="@string/phone_hint"
+            android:ems="10"
+            android:hint="@string/phone_hint"
+            android:inputType="phone"
+            app:layout_constraintBaseline_toBaselineOf="@id/phone"
+            app:layout_constraintStart_toEndOf="@id/phone" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_start"
+            android:layout_marginTop="@dimen/margin"
+            android:layout_marginEnd="@dimen/margin"
+            android:popupBackground="@color/colorAccent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBaseline_toBaselineOf="@id/phone_text"
+            app:layout_constraintStart_toEndOf="@id/phone_text"
+            app:layout_constraintTop_toBottomOf="@id/address_text" />
+
+        <TextView
+            android:id="@+id/note"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin"
+            android:layout_marginTop="@dimen/margin_form"
+            android:text="@string/note_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/phone" />
+
+        <EditText
+            android:id="@+id/note_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_top"
+            android:autofillHints="@string/note_hint"
+            android:ems="10"
+            android:hint="@string/note_hint"
+            android:inputType="textMultiLine|textCapSentences"
+            app:layout_constraintBaseline_toBaselineOf="@id/note"
+            app:layout_constraintStart_toEndOf="@id/note" />
+
+        <TextView
+            android:id="@+id/toppings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_marginTop="@dimen/margin"
+            android:text="@string/choose_toppings"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/note_text" />
+
+        <Button
+            android:id="@+id/btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/show_topping"
+            android:onClick="displayToppings"
+            android:background="@android:color/white"
+            android:textColor="@color/colorPrimaryDark"
+            android:paddingHorizontal="@dimen/margin_start"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_marginTop="@dimen/margin_top"
+            app:layout_constraintStart_toEndOf="@id/toppings"
+            app:layout_constraintTop_toTopOf="@id/toppings"
+            app:layout_constraintBottom_toBottomOf="@id/toppings"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <CheckBox
+            android:id="@+id/topping_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="getToppings"
+            android:text="@string/topping1"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_marginTop="@dimen/margin_top"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toppings"/>
+
+        <CheckBox
+            android:id="@+id/topping_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="getToppings"
+            android:text="@string/topping2"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_marginTop="@dimen/margin_top"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/topping_1"/>
+
+        <CheckBox
+            android:id="@+id/topping_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="getToppings"
+            android:text="@string/topping3"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_marginTop="@dimen/margin_top"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/topping_2"/>
+
+        <CheckBox
+            android:id="@+id/topping_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="getToppings"
+            android:text="@string/topping4"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_marginTop="@dimen/margin_top"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/topping_3"/>
+
+        <TextView
+            android:id="@+id/delivery_method"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_marginTop="@dimen/margin"
+            android:text="@string/delivery_method"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/topping_4" />
+
+        <RadioGroup
+            android:id="@+id/radioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_marginTop="@dimen/margin"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/delivery_method">
+
+            <RadioButton
+                android:id="@+id/sameday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/same_day" />
+
+            <RadioButton
+                android:id="@+id/nextday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/next_day" />
+
+            <RadioButton
+                android:id="@+id/pickup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/pick_up" />
+        </RadioGroup>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
