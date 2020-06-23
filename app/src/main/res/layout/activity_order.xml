@@ -11,6 +11,7 @@
         android:id="@+id/back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:contentDescription="@null"
         app:srcCompat="@drawable/back"
         android:background="@null"
         android:onClick="goBack"
@@ -23,6 +24,7 @@
         android:id="@+id/phone_call"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:contentDescription="@null"
         app:srcCompat="@drawable/phone"
         android:background="@null"
         android:onClick="call"
@@ -43,7 +45,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:paddingBottom="@dimen/margin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -35,6 +35,7 @@ public class OrderActivity extends AppCompatActivity implements AdapterView.OnIt
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTheme(R.style.AppTheme2);
         setContentView(R.layout.activity_order);
         statusBarConfig(findViewById(R.id.rootLayout));
 

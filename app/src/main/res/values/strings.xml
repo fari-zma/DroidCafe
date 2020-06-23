@@ -4,6 +4,7 @@
     <string name="donut">Donuts are glazed and sprinkled with candy.</string>
     <string name="icecream">Ice cream sandwiches have chocolate wafers and vanilla filling.</string>
     <string name="froyo">FroYo is premium self-serve frozen yogurt.</string>
+    <string name="have_not_order_message">You haven\'t ordered anything.</string>
     <string name="donut_order_message">You ordered a donut.</string>
     <string name="ice_cream_order_message">You ordered an ice cream sandwich.</string>
     <string name="froyo_order_message">You ordered a FroYo.</string>
@@ -28,4 +29,12 @@
     <string name="topping3">Cherries</string>
     <string name="topping4">Oreo cookie crumbles</string>
     <string name="show_topping">Show Topping</string>
+    <string name="action_order">Order</string>
+    <string name="action_status">Status</string>
+    <string name="action_favorites">Favorites</string>
+    <string name="action_contact">Contact</string>
+    <string name="action_order_message">You selected Order.</string>
+    <string name="action_status_message">You selected Status.</string>
+    <string name="action_favorites_message">You selected Favorites.</string>
+    <string name="action_contact_message">You selected Contact.</string>
 </resources>
